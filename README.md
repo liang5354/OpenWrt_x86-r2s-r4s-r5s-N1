@@ -24,7 +24,8 @@ X86/64, 友善 NanoPi、R2S、R4S、R4SE、R5S、R2C、R5C、R6S、NEO3, 斐讯 
 
 <a href="https://t.me/opwrt" target="_blank">TG通知频道</a>
 ## 1. **特色**
-+ 在.github/workflows/repo-dispatcher.yml里只保留ramips_mt7621的项目，其他都删了，需要原先自带的可以去原项目复制过来。
++ 在.github/workflows/repo-dispatcher.yml里只保留ramips_mt7621的项目，其他都删了，Openwrt-AutoBuild.yml删不删其他项目都无所谓，发现编译不影响。还有需要原先自带内容的可以去原项目复制过来。
+
 + 在devices/ramips_mt7621/.config里把非K2P的项目都注销掉，只保留k2p项目；在ramips_mt7621/diy.sh也可以添加需要的插件或者修改
 + 在Settings-secrets and variables-Actions里添加名称为TOKEN_KIDDIN9，内容为你的GITHUB_TOKEN值，因为.github/workflows/Openwrt-AutoBuild.yml的钥匙名称是TOKEN_KIDDIN9，非下面介绍的REPO_TOKEN，比如REPO_TOKEN: ${{ secrets.TOKEN_KIDDIN9 }}，但是REPO_TOKEN这个也最好也加一下，值为GITHUB_TOKEN
 + Cutting edge,openwrt官方openwrt-23.05分支版本, Kernel 5.15, 与官方最新源码同步.
